@@ -1,23 +1,21 @@
+//Задание 3. Время, время!
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-      fmt.Println("Обмен местами значений переменных")
-    a := 42
-    b := 153
-    fmt.Println("a:", a)
-    fmt.Println("b:", b)
+	shiftDuration := 480
+	customerOrders := 2
+	cashierCollects := 4
 
-    var t int
+	result := shiftDuration / (customerOrders + cashierCollects)
 
-    t = a
-    a = b
-    b = t
-    
-
-    fmt.Println("a:", a)
-    fmt.Println("b:", b)
+	fmt.Println("Расчёт количества клиентов, обслуживаемых за смену.")
+	fmt.Println("Введите длительность смены в минутах:", shiftDuration)
+	fmt.Println("Сколько минут клиент делает заказ:", customerOrders)
+	fmt.Println("Сколько минут кассир собирает заказ:", cashierCollects)
+	fmt.Println("-----Считаем-----")
+	fmt.Println("За смену длиной", shiftDuration, "минут кассир успеет обслужить", result, "клиентов.")
 }
