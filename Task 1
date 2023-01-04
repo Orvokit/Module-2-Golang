@@ -1,3 +1,4 @@
+// Задание 1. Улучшаем гонщика
 package main
 
 import (
@@ -5,19 +6,29 @@ import (
 )
 
 func main() {
-	var planet, star, ranger string
-  var money int
+	var lap int = 4
+	var engine int = 254
+	var wheels int = 93
+	var steeringWheel int = 49
+	var wind int = 21
+	var rain int = 17
 
-  fmt.Println("Введите название планеты.")
-  fmt.Scan(&planet)
-  fmt.Println("Введите название звездной планеты.")
-  fmt.Scan(&star)
-  fmt.Println("Введите имя рейнджера.")
-  fmt.Scan(&ranger)
-  fmt.Println("Введите сумму вознаграждения")
-  fmt.Scan(&money)
+	var speed int = engine + wheels + steeringWheel - wind - rain
 
-  fmt.Print("Как вам, ", ranger, ", известно, мы раса мирная, поэтому на наших военных кораблях используются наёмники с других планет. Система набора отработана давным-давно. Обычно мы приглашаем на наши корабли людей с планеты ", planet, " системы ", star, ".\n")
-  fmt.Print("Но случилась неприятность: в связи с большими потерями в последнее время престиж профессии сильно упал, и теперь не так-то просто завербовать призывников. Главный комиссар планеты ", planet, ", впрочем, отлично справлялся, но недавно его наградили орденом Сутулого с закруткой на спине, и его на радостях парализовало! Призыв под угрозой срыва!\n")
-  fmt.Print(ranger, ", вы должны прибыть на планету ", planet, " системы ", star, " и помочь выполнить план призыва. Мы готовы выплатить вам премию в ", money, " кредитов за эту маленькую услугу.\n")
+	fmt.Println("===================")
+	fmt.Print("Супергонки. Круг ", lap, "\n")
+	fmt.Println("===================")
+	fmt.Print("Шумахер (", speed, ")\n")
+	fmt.Println("===================")
+	fmt.Println("Водитель: Шумахер")
+	fmt.Print("Скорость: ", speed, "\n")
+	fmt.Println("-------------------")
+	fmt.Println("Оснащение")
+	fmt.Print("Двигатель: +", engine, "\n")
+	fmt.Print("Колёса: +", wheels, "\n")
+	fmt.Print("Руль: +", steeringWheel, "\n")
+	fmt.Println("-------------------")
+	fmt.Println("Действия плохой погоды")
+	fmt.Print("Ветер: −", wind, "\n")
+	fmt.Print("Дождь: −", rain, "\n")
 }
