@@ -1,0 +1,47 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Программа симуляции работы маршрутного такси.")
+
+  passengerCont := 0
+  var input, output int
+  money := 0
+
+  fmt.Println("Прибываем на остановку «Улица Программистов».")
+  fmt.Println("В салоне пассажиров:", passengerCont)
+  fmt.Print("Сколько пассажиров вышло на остановке: ")
+  fmt.Scan(&input)
+  fmt.Print("Сколько пассажиров вошло на остановке: ")
+  fmt.Scan(&output)
+  money += 20*input
+  passengerCont = passengerCont + input - output
+  fmt.Println("Отправляемся с остановки «Улица Программистов».")
+  fmt.Println("В салоне пассажиров:", passengerCont)
+
+  fmt.Println("-----------Едем----------")
+
+  fmt.Println("Прибываем на остановку «Проспект Алгоритмов».")
+  fmt.Println("В салоне пассажиров:", passengerCont)
+  fmt.Print("Сколько пассажиров вышло на остановке: ")
+  fmt.Scan(&input)
+  fmt.Print("Сколько пассажиров вошло на остановке: ")
+  fmt.Scan(&output)
+  money += 20*input
+  passengerCont = passengerCont + input - output
+  fmt.Println("Отправляемся с остановки «Проспект Алгоритмов».")
+  fmt.Println("В салоне пассажиров:", passengerCont)
+
+  fmt.Println("-----------Едем----------")
+
+  fmt.Println("Прибываем на остановку «Проспект Математиков». Конечная.")
+  fmt.Println("Всего заработали:", money, "рублей.")
+  fmt.Println("Зарплата водителя:", money / 4, "рублей.")
+  fmt.Println("Расходы на топливо:", money / 5, "рублей.")
+  fmt.Println("Налоги:", money / 5, "рублей.")
+  fmt.Println("Расходы на ремонт машины:", money / 5, "рублей.")
+  fmt.Println("Итого доход:", money - (money / 4 + (money / 5) * 3), "рублей.")
+}
